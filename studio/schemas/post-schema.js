@@ -28,6 +28,12 @@ export default {
       type: 'code'
     },
     {
+      title: 'Author(s)',
+      name: 'authors',
+      type: 'reference',
+      to: [{type: 'author'}]
+    },
+    {
       title: 'Categories',
       name: 'categories',
       type: 'reference',
