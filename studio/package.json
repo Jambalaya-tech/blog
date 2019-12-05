@@ -15,6 +15,8 @@
   ],
   "dependencies": {
     "@sanity/base": "^0.146.3",
+    "@sanity/code-input": "^0.146.0",
+    "@sanity/color-input": "^0.146.0",
     "@sanity/components": "^0.146.3",
     "@sanity/core": "^0.146.0",
     "@sanity/default-layout": "^0.146.3",
@@ -22,7 +24,9 @@
     "@sanity/desk-tool": "^0.146.3",
     "prop-types": "^15.6",
     "react": "^16.2",
-    "react-dom": "^16.2"
+    "react-dom": "^16.2",
+    "sanity-plugin-markdown": "^1.0.1",
+    "sanity-plugin-nyancat-spinner": "^1.0.0"
   },
   "devDependencies": {}
 }
