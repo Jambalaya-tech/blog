@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Gatsby Default Starter`,
@@ -28,13 +32,13 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-source-sanity',
+      resolve: "gatsby-source-sanity",
       options: {
-        projectId: 'abc123',
-        dataset: 'blog',
-        // a token with read permissions is required
-        // if you have a private dataset
-        token: process.env.MY_SANITY_TOKEN,
+        projectId: process.env.SANITY_ID,
+        dataset: process.env.SANITY_DATASET,
+        // token: process.env.SANITY_READ,
+        watchMode: true,
+        overlayDrafts: true,
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
