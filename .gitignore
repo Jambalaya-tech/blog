@@ -1,0 +1,5 @@
+site/node_modules
+studio/node_modules
+studio/dist
+.env.development
+.env.production
