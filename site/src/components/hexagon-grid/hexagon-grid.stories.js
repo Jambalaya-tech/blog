@@ -8,10 +8,10 @@ export default {
 
 export const standard = () => {
   return (
-    <div style={{ width: '1000px' }}>
+    <div style={{ width: '1000px', margin: '0 auto' }}>
       <HexagonGrid>
         {
-          [...Array(6)].map((item, index) => {
+          [...Array(4)].map((item, index) => {
             return <Hexagon key={index} width="400px">Hex {index}</Hexagon>
           })
         }

@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+// Gör om så här? https://codepen.io/ericornelissen/pen/vWbWKv
+
 export const HexagonGrid = ({ children }) => {
   return (
     <HexGrid>
@@ -11,12 +13,13 @@ export const HexagonGrid = ({ children }) => {
 
 const HexGrid = styled.div`
   display: grid;
-  grid-template-columns: 0.8fr 0.2fr 0.6fr 0.2fr 0.8fr;
-  grid-template-rows: repeat(6, 0.5fr);
+  grid-template-columns: repeat(3, minmax(0, 1fr)); // Note: 0 is needed to shrink the items if needed, check https://stackoverflow.com/a/43312314
+  grid-auto-rows: 1fr;
+  grid-gap: 10px;
   max-width: 100%;
   height: 100%;
 
-  > :nth-child(1) {
+  /* > :nth-child(1) {
     grid-column: 1 / 3;
     grid-row: 1 / 3;
   }
@@ -44,5 +47,5 @@ const HexGrid = styled.div`
   > :nth-child(6) {
     grid-column: 4 / 6;
     grid-row: 3 / 6;
-  }  
+  }   */
 `
